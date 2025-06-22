@@ -1,17 +1,23 @@
-# 🧠 AutoAE - AI Pharmacovigilance Project
+# 🧠 AutoAE – Adverse Event Extractor for Pharmacovigilance
 
-An AI-powered NLP tool that extracts Adverse Events, Drugs, and Seriousness information from medical literature such as PubMed abstracts.
+This project is an AI-powered NLP tool that extracts **Adverse Events (AEs)** from medical literature or case narratives. It uses a **custom-trained spaCy Named Entity Recognition (NER) model** specifically tuned for pharmacovigilance applications.
 
-## 🔍 Features
-- NLP-based AE and drug detection
-- Real-time Streamlit interface
-- CSV download for ICSR-like structure
+## 🚀 Live App
 
-## 💡 Technologies
-- Python, spaCy
-- Streamlit
-- Deployed for live recruiter demo
+👉 [Visit the Hugging Face Space](https://huggingface.co/spaces/<your-username>/autoae-app)  
+*(Link will be live after deployment)*
 
-## 🚀 Try It Yourself (optional deployment link)
+---
 
-Made by Kaushal OP 💊
+## 🧾 Features
+
+- Detects and highlights AEs from free-text input
+- Built with Streamlit for a fast and interactive web UI
+- Uses a custom NER model trained on AE-labeled data
+- Easy to run locally or deploy to Hugging Face Spaces
+
+---
+
+## 🗂 Project Structure
+
+Created BY KOUSHAL JOEL JILLELLA
