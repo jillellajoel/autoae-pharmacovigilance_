@@ -1,9 +1,12 @@
-import spacy, os
+import spacy
+import pandas as pd
+import os
 
+# ✅ Load model from local folder
 def get_spacy_model():
-    path = os.path.join("models", "en_core_web_sm")
-    if os.path.exists(path):
-        return spacy.load(path)
-    return spacy.load("en_core_web_sm")
+    try:
+        return spacy.load("models/en_core_web_sm")
+    except Exception as e:
+        raise RuntimeError(f"Failed to load spaCy model: {e}")
 
 nlp = get_spacy_model()
