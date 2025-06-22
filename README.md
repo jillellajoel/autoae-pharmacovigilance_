@@ -1,96 +1,94 @@
-# AutoAE – Adverse Event Extractor for Pharmacovigilance
+# 🧠 AutoAE – Adverse Event Extractor for Pharmacovigilance
 
-AutoAE is an AI-powered NLP tool that extracts Adverse Events (AEs) from medical case narratives using a custom-trained spaCy NER model. Designed specifically for pharmacovigilance workflows, it helps automate and accelerate the identification of key safety signals.
+AutoAE is an AI-powered NLP tool that extracts Adverse Events (AEs) from unstructured medical case narratives using a custom-trained spaCy NER model. Built for drug safety workflows, this tool helps automate the detection of critical safety signals faster and more efficiently.
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-FEATURES
+✨ FEATURES
 
-- Custom Named Entity Recognition (NER) model trained on AE-labeled data
-- Interactive and lightweight web interface built with Streamlit
-- Accepts free-text input for real-time AE extraction
-- Built for pharmacovigilance professionals and case processors
-- Ready for local or Hugging Face Spaces deployment
+✅ Custom-trained NER model for AE detection  
+✅ Built with Streamlit for instant browser-based use  
+✅ Clean UI for entering and analyzing free-text case narratives  
+✅ Designed for pharmacovigilance professionals & researchers  
+✅ Fully compatible with Hugging Face Spaces deployment  
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-PROJECT STRUCTURE
+📁 PROJECT STRUCTURE
 
-autoae-app/
-├── app.py                  <- Main Streamlit interface
-├── models/
-│   └── ae_custom_model/    <- Custom trained spaCy AE model
-├── requirements.txt        <- Dependencies file
-└── README.md               <- Project documentation
+autoae-app/  
+├── app.py                  → Main Streamlit app  
+├── models/  
+│   └── ae_custom_model/    → Your trained AE NER model  
+├── requirements.txt        → App dependencies  
+└── README.md               → This documentation file  
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-HOW TO RUN THE APP LOCALLY
+💻 HOW TO RUN LOCALLY
 
-Step 1: Clone the repository  
-        git clone https://github.com/jillellajoel/autoae-pharmacovigilance_.git  
-        cd autoae-pharmacovigilance_
+🔹 Step 1: Clone this repository  
+    git clone https://github.com/jillellajoel/autoae-pharmacovigilance_.git  
+    cd autoae-pharmacovigilance_
 
-Step 2: (Optional) Create a virtual environment  
-        python -m venv venv  
-        source venv/bin/activate  
-        (On Windows: venv\Scripts\activate)
+🔹 Step 2: (Optional) Set up a virtual environment  
+    python -m venv venv  
+    source venv/bin/activate  
+    (Windows: venv\Scripts\activate)
 
-Step 3: Install dependencies  
-        pip install -r requirements.txt
+🔹 Step 3: Install dependencies  
+    pip install -r requirements.txt
 
-Step 4: Run the Streamlit app  
-        streamlit run app.py
+🔹 Step 4: Launch the app  
+    streamlit run app.py
 
-------------------------------------------------------------
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-DEPLOYMENT ON HUGGING FACE SPACES
+🚀 DEPLOY ON HUGGING FACE SPACES
 
-To deploy this app on Hugging Face Spaces:
+1️⃣ Go to https://huggingface.co/spaces  
+2️⃣ Click "Create new Space" and choose "Streamlit" as the SDK  
+3️⃣ Upload these items:
+    • app.py  
+    • requirements.txt  
+    • models/ae_custom_model/ (your trained NER model)
 
-1. Go to huggingface.co/spaces
-2. Click "Create new Space" and select "Streamlit" as SDK
-3. Upload the following files:
-   - app.py
-   - requirements.txt
-   - models/ae_custom_model/ folder
+🎯 After upload, your app will launch automatically.
 
-Once pushed, Hugging Face will automatically launch your app.
+🔗 Demo (Coming Soon):  
+    https://huggingface.co/spaces/jillellajoel/autoae-app
 
-Live demo (coming soon):  
-https://huggingface.co/spaces/jillellajoel/autoae-app
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-------------------------------------------------------------
+📦 REQUIREMENTS
 
-REQUIREMENTS
+• Python 3.8+  
+• spaCy  
+• Streamlit  
 
-- Python 3.8+
-- streamlit
-- spacy
+📥 Optional spaCy model download:  
+    python -m spacy download en_core_web_sm
 
-If needed, run:  
-python -m spacy download en_core_web_sm
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-------------------------------------------------------------
+🛠️ TO-DO ROADMAP
 
-TO-DO ROADMAP
+☑ Improve model accuracy with more AE-labeled data  
+☑ Add batch input for multi-narrative support  
+☑ Enable CSV export for extracted AEs  
+☑ Publicly deploy to Hugging Face Spaces  
+☑ Add visual confidence score & structured AE output  
 
-- Add export to CSV
-- Add batch processing support
-- Improve model with more AE-labeled data
-- Deploy final version publicly
-- Add UI enhancements (confidence score, structured output)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-------------------------------------------------------------
+👤 AUTHOR
 
-AUTHOR
+📛 Kaushal Joel  
+🎓 B. Pharm 
+📧 jillellakaushal000@gmail.com  
 
-Kaushal Joel  
-Final Year B. Pharmacy Student  
-Email: jillellakaushal000@gmail.com
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-------------------------------------------------------------
+🌟 SUPPORT THIS PROJECT
 
-SHOW YOUR SUPPORT
-
-If you find this project useful, please give it a ⭐ on GitHub and share it with others in the PV and NLP community.
+If you found this useful, give the repo a ⭐ on GitHub and share it with the PV and AI communities!
