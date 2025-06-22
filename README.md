@@ -1,81 +1,96 @@
-# 🧠 AutoAE – Adverse Event Extractor for Pharmacovigilance
+# AutoAE – Adverse Event Extractor for Pharmacovigilance
 
-AutoAE is an AI-powered NLP tool that extracts **Adverse Events (AEs)** from medical case narratives using a custom-trained spaCy NER model. Designed specifically for pharmacovigilance workflows, it helps automate and accelerate the identification of key safety signals.
+AutoAE is an AI-powered NLP tool that extracts Adverse Events (AEs) from medical case narratives using a custom-trained spaCy NER model. Designed specifically for pharmacovigilance workflows, it helps automate and accelerate the identification of key safety signals.
 
----
+------------------------------------------------------------
 
-## 🚀 Features
+FEATURES
 
-- 🧠 Custom Named Entity Recognition (NER) model trained on AE-labeled data  
-- ⚡️ Interactive and lightweight web interface built with Streamlit  
-- 📂 Accepts free-text input for real-time AE extraction  
-- 🧪 Built for pharmacovigilance professionals and case processors  
-- 🌐 Ready for local or Hugging Face Spaces deployment  
+- Custom Named Entity Recognition (NER) model trained on AE-labeled data
+- Interactive and lightweight web interface built with Streamlit
+- Accepts free-text input for real-time AE extraction
+- Built for pharmacovigilance professionals and case processors
+- Ready for local or Hugging Face Spaces deployment
 
----
+------------------------------------------------------------
 
-## 🗂 Project Structure
+PROJECT STRUCTURE
 
 autoae-app/
-├── app.py ← Main Streamlit interface
+├── app.py                  <- Main Streamlit interface
 ├── models/
-│ └── ae_custom_model/ ← Custom trained spaCy AE model
-├── requirements.txt ← Dependencies file
-└── README.md ← Project documentation
+│   └── ae_custom_model/    <- Custom trained spaCy AE model
+├── requirements.txt        <- Dependencies file
+└── README.md               <- Project documentation
 
+------------------------------------------------------------
 
----
+HOW TO RUN THE APP LOCALLY
 
-## 💻 How to Run the App Locally
+Step 1: Clone the repository  
+        git clone https://github.com/jillellajoel/autoae-pharmacovigilance_.git  
+        cd autoae-pharmacovigilance_
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/jillellajoel/autoae-pharmacovigilance_.git
-   cd autoae-pharmacovigilance_
-   
-2. Create a virtual environment (optional but recommended)
-     python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+Step 2: (Optional) Create a virtual environment  
+        python -m venv venv  
+        source venv/bin/activate  
+        (On Windows: venv\Scripts\activate)
 
-3. Install the required packages
-  pip install -r requirements.txt
+Step 3: Install dependencies  
+        pip install -r requirements.txt
 
-4. Launch the app
-    streamlit run app.py
+Step 4: Run the Streamlit app  
+        streamlit run app.py
 
+------------------------------------------------------------
 
-   🌐 Deployment
-This app is designed for deployment on Hugging Face Spaces using the Streamlit SDK. Just upload this project folder to a new Space and it will auto-run.
+DEPLOYMENT ON HUGGING FACE SPACES
 
-Demo coming soon: huggingface.co/spaces/jillellajoel/autoae-app
+To deploy this app on Hugging Face Spaces:
 
-📦 Requirements
-Python 3.8+
+1. Go to huggingface.co/spaces
+2. Click "Create new Space" and select "Streamlit" as SDK
+3. Upload the following files:
+   - app.py
+   - requirements.txt
+   - models/ae_custom_model/ folder
 
-spaCy
+Once pushed, Hugging Face will automatically launch your app.
 
-Streamlit
+Live demo (coming soon):  
+https://huggingface.co/spaces/jillellajoel/autoae-app
 
-✅ To-Do (Roadmap)
- Add export option for AE output
+------------------------------------------------------------
 
- Batch input for multi-case AE extraction
+REQUIREMENTS
 
- Model training UI for uploading new AE-labeled datasets
+- Python 3.8+
+- streamlit
+- spacy
 
- Public Hugging Face Space deployment
+If needed, run:  
+python -m spacy download en_core_web_sm
 
-🙋‍♂️ Author
-Kaushal Joel
-📧 jillellakaushal000@gmail.com
-🎓 B. Pharm | Passionate about Pharmacovigilance + NLP
+------------------------------------------------------------
 
-⭐️ Show your support
-If you found this useful, consider giving the repo a ⭐ on GitHub!
+TO-DO ROADMAP
 
----
+- Add export to CSV
+- Add batch processing support
+- Improve model with more AE-labeled data
+- Deploy final version publicly
+- Add UI enhancements (confidence score, structured output)
 
+------------------------------------------------------------
 
+AUTHOR
 
+Kaushal Joel  
+Final Year B. Pharmacy Student  
+Email: jillellakaushal000@gmail.com
 
+------------------------------------------------------------
 
+SHOW YOUR SUPPORT
+
+If you find this project useful, please give it a ⭐ on GitHub and share it with others in the PV and NLP community.
