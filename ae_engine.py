@@ -1,11 +1,17 @@
 import spacy
 import os
 
+# Function to load the custom NER model
 def get_spacy_model():
-    model_path = os.path.join("models", "en_core_web_sm")
-    if os.path.exists(model_path):
-        return spacy.load(model_path)
-    else:
-        return spacy.load("en_core_web_sm")
+    # Load the trained AE detection model from the models directory
+    return spacy.load(os.path.join("models", "ae_custom_model"))
 
-nlp = get_spacy_model()
+# Function to extract Adverse Events using the loaded model
+def extract_adverse_events(text):
+    nlp = get_spacy_model()
+    doc = nlp(text)
+
+    # Extract named entities labeled as AE (Adverse Event)
+    adverse_events = [ent.text for ent in doc.ents if ent.label_ == "AE"]
+
+    return adverse_events
