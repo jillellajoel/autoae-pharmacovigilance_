@@ -1,4 +1,12 @@
+[![🤗 View on Hugging Face](https://img.shields.io/badge/🤗%20Live%20App-HuggingFace-blue)](https://huggingface.co/spaces/jillellajoel/autoae-app)
+
 # 🧠 AutoAE – Adverse Event Extractor for Pharmacovigilance
+
+Created by **Joel Jillella**  
+📄 [LinkedIn](https://www.linkedin.com/in/koushal-joel-jillella-b29689338)  
+🧪 Pharmacovigilance Automation | Custom NER | NLP for Drug Safety
+
+---
 
 AutoAE is an AI-powered NLP tool that extracts Adverse Events (AEs) from unstructured medical case narratives using a custom-trained spaCy NER model. Built for drug safety workflows, this tool helps automate the detection of critical safety signals faster and more efficiently.
 
